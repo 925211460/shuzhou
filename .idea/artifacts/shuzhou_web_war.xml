@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="shuzhou-web:war">
+    <output-path>$PROJECT_DIR$/shuzhou-web/target</output-path>
+    <root id="archive" name="shuzhou-web.war">
+      <element id="artifact" artifact-name="shuzhou-web:war exploded" />
+    </root>
+  </artifact>
+</component>
