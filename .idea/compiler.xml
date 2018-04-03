@@ -14,12 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="shuzhou" target="1.5" />
-      <module name="shuzhou-common" target="1.5" />
-      <module name="shuzhou-dao" target="1.5" />
-      <module name="shuzhou-service" target="1.5" />
-      <module name="shuzhou-utils" target="1.5" />
-      <module name="shuzhou-web" target="1.5" />
+      <module name="shuzhou" target="1.8" />
+      <module name="shuzhou-common" target="1.8" />
+      <module name="shuzhou-dao" target="1.8" />
+      <module name="shuzhou-service" target="1.8" />
+      <module name="shuzhou-utils" target="1.8" />
+      <module name="shuzhou-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
