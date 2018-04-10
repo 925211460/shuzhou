@@ -1,6 +1,8 @@
 package com.shuzhou.controller;
 
 import com.shuzhou.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +16,6 @@ import com.shuzhou.domain.User;
 @RestController
 @RequestMapping("/")
 public class TestController {
-
     @Autowired
     private UserService userService;
 
@@ -25,6 +26,13 @@ public class TestController {
 
     @RequestMapping("/add")
     public void testAddUser(@RequestParam String userName){
+        Logger logger = LoggerFactory.getLogger(this.getClass());
+        logger.trace("---trace");
+        logger.debug("---debug");
+        logger.info("---info");
+        logger.warn("---warn");
+        logger.error("---err");
+
         User user = new User();
         user.setUsername(userName);
         userService.createUser(user);
