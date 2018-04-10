@@ -1,12 +1,11 @@
-package com.shuzhou.service.impl;
+package com.shuzhou.demo.impl;
 
-import com.shuzhou.service.UserService;
+import com.shuzhou.demo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.shuzhou.domain.User;
 import com.shuzhou.mapper.UserMapper;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**

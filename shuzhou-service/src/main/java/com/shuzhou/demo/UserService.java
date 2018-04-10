@@ -1,4 +1,4 @@
-package com.shuzhou.service;
+package com.shuzhou.demo;
 
 import com.shuzhou.domain.User;
 
