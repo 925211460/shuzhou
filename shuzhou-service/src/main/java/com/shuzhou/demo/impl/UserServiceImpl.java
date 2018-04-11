@@ -1,5 +1,7 @@
 package com.shuzhou.demo.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.shuzhou.demo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAllUser() {
-        return null;
+        PageHelper.startPage(1,0);
+        List<User> allUser = userMapper.findAllUser();
+        PageInfo page = new PageInfo(allUser);
+        System.out.println("pageNum:"+page.getPageNum());
+        System.out.println("totalPage:"+page.getPages());
+        System.out.println("totalcount:"+page.getTotal());
+        System.out.println("isHasPreviousPage"+page.isHasNextPage());
+        return allUser;
     }
 }

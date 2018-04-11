@@ -40,7 +40,7 @@
         <appender-ref ref="file" />
     </root>
 
-    <logger name="com.shuzhou.mapper" level="debug" additivity="false">
+    <logger name="com.shuzhou.mapper" level="debug" additivity="true">
         <appender-ref ref="mapper"/>
     </logger>
 
