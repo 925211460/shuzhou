@@ -41,15 +41,8 @@
             <version>1.2.4</version>
         </dependency>
     </dependencies>
-
-
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -81,8 +74,6 @@
                     <verbose>true</verbose>
                     <!-- 是否覆盖 -->
                     <overwrite>true</overwrite>
-                    <!-- 自动生成的配置 -->
-                    <configurationFile>src/main/resources/mybatis-generator.xml</configurationFile>
                 </configuration>
             </plugin>
         </plugins>
