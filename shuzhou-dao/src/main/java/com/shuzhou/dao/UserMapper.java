@@ -1,4 +1,4 @@
-package com.shuzhou.mapper;
+package com.shuzhou.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import com.shuzhou.domain.User;

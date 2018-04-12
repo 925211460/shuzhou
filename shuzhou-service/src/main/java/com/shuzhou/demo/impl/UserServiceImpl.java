@@ -6,7 +6,7 @@ import com.shuzhou.demo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.shuzhou.domain.User;
-import com.shuzhou.mapper.UserMapper;
+import com.shuzhou.dao.UserMapper;
 
 import java.util.List;
 
