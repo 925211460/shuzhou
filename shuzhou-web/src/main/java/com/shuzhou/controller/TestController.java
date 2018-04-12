@@ -40,7 +40,7 @@ public class TestController {
     }
 
     @RequestMapping("/userList")
-    public List<User> userList(){
+    public List<User> userList() {
         return userService.findAllUser();
     }
 }
