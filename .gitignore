@@ -1,6 +1,0 @@
-.gitignore
-*.iml
-target
-.idea
-.DS_Store
-ziyuanpai-dao/src/main/java/com/heyean/ziyuanpai/dao/GenerateDaoXml.java
