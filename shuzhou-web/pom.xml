@@ -21,6 +21,11 @@
             <artifactId>shuzhou-service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+<!--
+        如果您想保留Spring Boot MVC功能，并且想要添加其他MVC配置（拦截器，格式化器，视图控制器和其他功能），则可以添加自己的@Configuration类型WebMvcConfigurer，但不包含@EnableWebMvc。
+        如果您希望提供RequestMappingHandlerMapping，RequestMappingHandlerAdapter或ExceptionHandlerExceptionResolver的自定义实例，则可以声明WebMvcRegistrationsAdapter实例以提供此类组件。
+        如果你想完全控制Spring MVC，你可以添加你自己的用@EnableWebMvc注解的@Configuration。
+-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

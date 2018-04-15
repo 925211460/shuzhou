@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration  scan="true" scanPeriod="60 seconds" debug="false">
-    <contextName>logback</contextName>
+
+    <springProfile name="dev">
+        <!-- configuration to be enabled when the "staging" profile is active -->
+    </springProfile>
+    <springProfile name="!pro">
+        <!-- configuration to be enabled when the "production" profile is not active -->
+    </springProfile>
+    <!--将spring Environment中的属性暴露给logback-spring.xml-->
+    <springProperty scope="context" name="environment" source="shuzhou.current.environment" defaultValue="localhost"/>
+
+
+    <contextName>${environment}</contextName>
     <property name="log.path" value="/var/log/shuzhou" />
     <!--输出到控制台-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">

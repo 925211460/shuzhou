@@ -4,6 +4,7 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 /**
  * Created by Administrator on 2018/4/10 0010.
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class PayConfig {
 
     @Bean
+    @Profile("devAlipay")
     public AlipayClient getDefaultAlipayClient(){
         DefaultAlipayClient defaultAlipayClient = new DefaultAlipayClient("https://openapi.alipaydev.com/gateway.do",
                 "2016081600256101",
@@ -21,7 +23,5 @@ public class PayConfig {
                 "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuQvn4YimY8gGBAFs7C+5Y2KTuGFNs0iMmP0NL+4gLfacJVUO7xnMNPCEfvN/1c6P8NhLZ6aBU338Qs8YYUpwN+dZKkgDxL+JskNdFXNLXp9hZPjta5U5vB6/Icfpm8zeEFuxbuMGL6LApj5AGgt6FFA9PYEdZOdMMcwMhYs9ZK+pmACryCYZfWLNvPrshQg5wA4WGFX7c6veLmLvu/ORJHALwO/fYMKjd+ux4SZoh29OccZRiTO63/Bp548Lmtedr0QB10OufB625tAfu2bFz1grlT5+lZrQuAb4VVlQMTlGgisHOnTUzePk5c3pBaSd8BW17Pf44Eh0RJt+YVaBYQIDAQAB",
                 "RSA2" );
         return defaultAlipayClient;
-
     }
-
 }
