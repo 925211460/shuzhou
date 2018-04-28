@@ -1,6 +1,6 @@
 package com.shuzhou.ApplicationUtils;
 
-import com.shuzhou.PropertiesBean;
+import com.shuzhou.AppSystemProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
  * 而ApplicationRunner使用前面讨论的ApplicationArguments接口。以下示例显示带有run方法的CommandLineRunner：
  */
 @Component
-@EnableConfigurationProperties(PropertiesBean.class)
+@EnableConfigurationProperties(AppSystemProperties.class)
 public class MyCommandLineRunner implements CommandLineRunner{
 
     @Value("${my.uuid}")
@@ -25,14 +25,16 @@ public class MyCommandLineRunner implements CommandLineRunner{
     private String configLocation;
 
     @Autowired
-    private PropertiesBean propertiesBean;
+    private AppSystemProperties appSystemProperties;
 
     @Override
     public void run(String... strings) throws Exception {
         System.out.println("程序马上就要起飞了,参数有---"+strings.toString());
         System.out.println("uuid---"+uuid);
         System.out.println("spring.config.location---"+configLocation);
-        System.out.println("activeProfile---"+propertiesBean.getShuzhouProfilesActive());
-        System.out.println("currentEnvironment---"+propertiesBean.getCurrentEnvironment());
+        System.out.println("currentEnvironment---"+appSystemProperties.getCurrentEnvironment());
+        System.out.println("list----"+appSystemProperties.getList());
+        System.out.println("sessionTimeOut---"+appSystemProperties.getSessionTimeout());
+        System.out.println("readeTimeOut----"+appSystemProperties.getReadTimeout());
     }
 }
