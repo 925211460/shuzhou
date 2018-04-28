@@ -2,6 +2,8 @@ package com.shuzhou.controller;
 
 import com.shuzhou.demo.UserService;
 import com.shuzhou.domain.User;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +22,8 @@ import java.util.List;
 public class TestController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private AdminClient adminClient;
 
     @RequestMapping("/test")
     public void helloWorld(){

@@ -30,5 +30,11 @@
             <artifactId>alipay-sdk-java</artifactId>
             <version>3.0.0</version>
         </dependency>
+        <!-- kafka依赖 -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>1.1.0</version>
+        </dependency>
     </dependencies>
 </project>
