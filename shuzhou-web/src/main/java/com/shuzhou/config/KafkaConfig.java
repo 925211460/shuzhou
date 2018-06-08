@@ -14,6 +14,7 @@ import java.util.Properties;
 /**
  * Created by lufei on 18/4/28.
  */
+
 @Configuration
 @EnableConfigurationProperties(KafkaProperties.class)
 public class KafkaConfig {

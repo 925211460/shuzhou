@@ -1,2 +1,2 @@
-FROM java:8
-ADD shuzhou.war /opt/jboss/wildfly/standalone/deployments/
+FROM tomcat:latest
+COPY / /usr/local/tomcat/webapps/ROOT/
